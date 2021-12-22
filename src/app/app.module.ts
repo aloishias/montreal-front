@@ -7,6 +7,8 @@ import { MangasComponent } from './mangas/mangas.component';
 import { AddMangaComponent } from './add-manga/add-manga.component';
 import { MangaDetailsComponent } from './manga-details/manga-details.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { MangaDetailsComponent } from './manga-details/manga-details.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

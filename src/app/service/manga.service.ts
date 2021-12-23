@@ -11,7 +11,7 @@ import { Manga } from '../entity/manga';
 })
 export class MangaService {
 
-  private mangaUrl = 'http://127.0.0.1:9090/mangas/byAccount/1';  // URL to web api
+  private mangaUrl = 'http://127.0.0.1:9090/mangas';  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin':'*' })
@@ -21,11 +21,19 @@ export class MangaService {
   constructor(private http: HttpClient) { }
 
   getMangas(): Observable<Manga[]> {
-    return this.http.get<Manga[]>(this.mangaUrl, this.httpOptions)
+    return this.http.get<Manga[]>(this.mangaUrl + '/byAccount/1', this.httpOptions)
       .pipe(
         tap(_ => console.log('fetched mangas')),
         catchError(this.handleError<Manga[]>('getMangas', []))
       );
+  }
+  
+
+  addManga(manga: Manga): Observable<Manga> {
+    return this.http.post<Manga>(this.mangaUrl, manga, this.httpOptions).pipe(
+      tap((newManga: Manga) => console.log('Manga ajouté')),
+      catchError(this.handleError<Manga>('addManga'))
+    );
   }
 
   /**

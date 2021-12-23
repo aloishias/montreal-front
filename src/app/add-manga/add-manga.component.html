@@ -3,14 +3,14 @@
     <p>Entrez les informations pour ajouter un manga à votre collection</p>
     <hr>
 
-    <label for="mangaName"><b>Nom du manga</b></label>
-    <input type="text" placeholder="Entrez le nom du mansa" name="mangaName" id="mangaName" required>
+    <label><b>Nom du manga</b></label>
+    <input type="text" placeholder="Entrez le nom du mansa" name="mangaName" #mangaName required>
 
-    <label for="mangaNumber"><b>Numéro du tome</b></label>
-    <input type="text" placeholder="Entrez le numéro du tome" name="mangaNumber" id="mangaNumber" required>
+    <label><b>Numéro du tome</b></label>
+    <input type="number" name="mangaNumber" #mangaNumber required>
 
-    <label for="mangaNumber"><b>Entrez une url d'image de couverture</b></label>
-    <input type="text" placeholder="http://monImage.fr/123.jpeg" name="mangaNumber" id="mangaNumber" required>
+    <label><b>Entrez une url d'image de couverture</b></label>
+    <input type="text" placeholder="http://monImage.fr/123.jpeg" name="mangaImageLink" #mangaImageLink required>
 
     <p>Valider votre nouveau manga !</p>
     <button type="submit" class="registerbtn">Valider</button>

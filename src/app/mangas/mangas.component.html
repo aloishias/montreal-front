@@ -1,9 +1,9 @@
 <p>{{mangaComponent}}</p>
 <ul>
-    <li *ngFor="let manga of mangas">
-        <ul>
-            <p>Nom manga: {{manga.mangaTitle}}</p>
-            <p>Numéro tome: {{manga.mangaNumber}}</p>
-        </ul>
-    </li>
+    <div class="wrapper" *ngFor="let manga of mangas">
+        <div class="card" >
+            <img src={{manga.mangaImageLink}} alt={{manga.mangaTitle}} style="width:100%">
+            <h1>{{manga.mangaTitle}} {{manga.mangaNumber}}</h1>
+        </div>
+    </div>
 </ul>

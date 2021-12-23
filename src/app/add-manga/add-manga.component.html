@@ -1,17 +1,17 @@
-<div>
-    <div>
-        <input type="text" placeholder="Name of manga">
-    </div>
-    <div>
-        <input type="text" placeholder="Number of manga">
-    </div>
-    <div>
-        <input type="text" placeholder="Author of manga">
-    </div>
-    <div>
-        <input type="text" placeholder="Link of image">
-    </div>
-    <div>
-        <input type="submit">
-    </div>
+<div class="container">
+    <h1>Ajout d'un manga</h1>
+    <p>Entrez les informations pour ajouter un manga à votre collection</p>
+    <hr>
+
+    <label for="mangaName"><b>Nom du manga</b></label>
+    <input type="text" placeholder="Entrez le nom du mansa" name="mangaName" id="mangaName" required>
+
+    <label for="mangaNumber"><b>Numéro du tome</b></label>
+    <input type="text" placeholder="Entrez le numéro du tome" name="mangaNumber" id="mangaNumber" required>
+
+    <label for="mangaNumber"><b>Entrez une url d'image de couverture</b></label>
+    <input type="text" placeholder="http://monImage.fr/123.jpeg" name="mangaNumber" id="mangaNumber" required>
+
+    <p>Valider votre nouveau manga !</p>
+    <button type="submit" class="registerbtn">Valider</button>
 </div>

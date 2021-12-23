@@ -4,5 +4,4 @@ export interface Manga {
     mangaAuthor: string;
     mangaImageLink: string;
     mangaNumber: number;
-    idAccount: number;
 }

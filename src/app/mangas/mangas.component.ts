@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Manga } from '../entity/manga';
-import { MANGAS } from '../entity/mock-mangas';
+import { MangaService } from '../service/manga.service';
 
 @Component({
   selector: 'app-mangas',
@@ -11,11 +11,17 @@ export class MangasComponent implements OnInit {
 
   mangaComponent = "Manga component";
 
-  mangas = MANGAS;
+  mangas: Manga[]= [];
 
-  constructor() { }
+  constructor(private mangaService: MangaService) { }
 
   ngOnInit(): void {
+    this.getMangas();
+  }
+
+  getMangas(): void {
+    this.mangaService.getMangas()
+    .subscribe(mangas => this.mangas = mangas);
   }
 
 }

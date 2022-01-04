@@ -1,7 +1,7 @@
 export interface Manga {
-    mangaId: number;
     mangaTitle: string;
     mangaAuthor: string;
     mangaImageLink: string;
-    mangaNumber: number;
+    mangaNumber: string;
+    accountId: number;
 }

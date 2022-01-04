@@ -30,10 +30,9 @@ export class MangaService {
   
 
   addManga(manga: Manga): Observable<Manga> {
-    return this.http.post<Manga>(this.mangaUrl, manga, this.httpOptions).pipe(
-      tap((newManga: Manga) => console.log('Manga ajouté')),
-      catchError(this.handleError<Manga>('addManga'))
-    );
+    console.log("Tu passes aussi par là");
+    console.log(manga);
+    return this.http.post<Manga>(this.mangaUrl, manga, this.httpOptions);
   }
 
   /**

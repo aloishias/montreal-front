@@ -7,11 +7,14 @@
     <input type="text" placeholder="Entrez le nom du mansa" name="mangaName" #mangaName required>
 
     <label><b>Numéro du tome</b></label>
-    <input type="number" name="mangaNumber" #mangaNumber required>
+    <input type="number" name="mangaNumber" #mangaNumber required><br>
+
+    <label><b>Entrez le nom de l'auteur</b></label>
+    <input type="text" placeholder="Kentaro Miura" name="mangaImageLink" #mangaAuthor required>
 
     <label><b>Entrez une url d'image de couverture</b></label>
     <input type="text" placeholder="http://monImage.fr/123.jpeg" name="mangaImageLink" #mangaImageLink required>
 
     <p>Valider votre nouveau manga !</p>
-    <button type="submit" class="registerbtn">Valider</button>
+    <button type="submit" class="registerbtn" (click)="add(mangaName.value, mangaNumber.value, mangaAuthor.value, mangaImageLink.value)">Valider</button>
 </div>
